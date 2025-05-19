@@ -31,7 +31,10 @@ export default function InvoiceCard({ invoice }: InvoiceCardProps) {
   };
   
   return (
-    <Card className="hover:shadow-md transition-all">
+    <Card 
+      className="hover:shadow-md transition-all cursor-pointer" 
+      onClick={() => navigate(`/invoices/${invoice.id}`)}
+    >
       <CardContent className="p-6">
         <div className="flex justify-between items-start">
           <div>
